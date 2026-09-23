@@ -12,25 +12,69 @@
 
 <body>
 
-<header class="header">
+  <header class="header">
 
-  <div class="header-inner">
-
-    <a href="index.html" class="logo">
-      LUMÉA <span>hair salon</span>
-    </a>
-
-    <nav class="nav">
-      <a href="concept.html">CONCEPT</a>
-      <a href="style.html">STYLE</a>
-      <a href="stylist.html">STYLIST</a>
-      <a href="menu.html">MENU</a>
-      <a href="#">ACCESS</a>
+    <div class="header-inner">
+  
+      <a href="index.html" class="logo">
+        LUMÉA <span>hair salon</span>
+      </a>
+  
+      <!-- PC NAV -->
+      <nav class="nav">
+        <a href="concept.html">CONCEPT</a>
+        <a href="style.html">STYLE</a>
+        <a href="stylist.html">STYLIST</a>
+        <a href="menu.html">MENU</a>
+        <a href="#">ACCESS</a>
+      </nav>
+  
+      <!-- SP HAMBURGER -->
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="spNav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+  
+    </div>
+  
+    <!-- SP NAV -->
+    <nav class="sp-nav" id="spNav">
+  
+      <a href="concept.html">
+        <span>CONCEPT</span>
+        <small>コンセプト</small>
+      </a>
+  
+      <a href="style.html">
+        <span>STYLE</span>
+        <small>ヘアスタイル</small>
+      </a>
+  
+      <a href="stylist.html">
+        <span>STYLIST</span>
+        <small>スタイリスト</small>
+      </a>
+  
+      <a href="menu.html">
+        <span>MENU</span>
+        <small>メニュー</small>
+      </a>
+  
+      <a href="#">
+        <span>ACCESS</span>
+        <small>アクセス</small>
+      </a>
+  
     </nav>
-
-  </div>
-
-</header>
+  
+  </header>
 
 
 <main class="concept-main">
