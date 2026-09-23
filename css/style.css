@@ -94,6 +94,193 @@ HEADER
   width: 100%;
 }
 
+/* =========================
+HAMBURGER
+========================= */
+
+.hamburger {
+  display: none;
+
+  width: 32px;
+  height: 24px;
+
+  position: relative;
+
+  border: none;
+  background: none;
+
+  padding: 0;
+
+  cursor: pointer;
+
+  z-index: 1100;
+}
+
+.hamburger span {
+  position: absolute;
+
+  left: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background: #222;
+
+  transition:
+    transform 0.3s ease,
+    top 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.hamburger span:nth-child(1) {
+  top: 2px;
+}
+
+.hamburger span:nth-child(2) {
+  top: 11px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 20px;
+}
+
+
+/* 開いた時 × にする */
+
+.hamburger.active span:nth-child(1) {
+  top: 11px;
+
+  transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  top: 11px;
+
+  transform: rotate(-45deg);
+}
+
+
+/* =========================
+SP NAV
+========================= */
+
+.sp-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  /* PCナビを隠す */
+  .nav {
+    display: none;
+  }
+
+  /* ハンバーガー表示 */
+  .hamburger {
+    display: block;
+  }
+
+  .header {
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    background: #fff;
+  }
+
+  .header-inner {
+    position: relative;
+
+    z-index: 1100;
+  }
+
+
+  /* =========================
+  スマホメニュー
+  ========================= */
+
+  .sp-nav {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 80px 35px 40px;
+
+    background: rgba(255, 255, 255, 0.98);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-15px);
+
+    transition:
+      opacity 0.35s ease,
+      visibility 0.35s ease,
+      transform 0.35s ease;
+
+    z-index: 1050;
+  }
+
+
+  .sp-nav.active {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+  }
+
+
+  .sp-nav a {
+    padding: 18px 0;
+
+    border-bottom: 1px solid #ddd;
+
+    font-size: 17px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .sp-nav a:first-child {
+    border-top: 1px solid #ddd;
+  }
+
+
+  .sp-nav span {
+    display: block;
+  }
+
+
+  .sp-nav small {
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    color: #999;
+  }
+
+}
+
 
 /* =========================
 MAIN
