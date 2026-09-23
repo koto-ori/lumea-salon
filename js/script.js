@@ -269,3 +269,74 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
   });
+
+  document.addEventListener("DOMContentLoaded", () => {
+
+    const hamburger =
+      document.getElementById("hamburger");
+  
+    const spNav =
+      document.getElementById("spNav");
+  
+  
+    if (!hamburger || !spNav) {
+      return;
+    }
+  
+  
+    hamburger.addEventListener("click", () => {
+  
+      hamburger.classList.toggle("active");
+  
+      spNav.classList.toggle("active");
+  
+  
+      const isOpen =
+        spNav.classList.contains("active");
+  
+  
+      hamburger.setAttribute(
+        "aria-expanded",
+        isOpen
+      );
+  
+  
+      if (isOpen) {
+  
+        document.body.style.overflow = "hidden";
+  
+      } else {
+  
+        document.body.style.overflow = "";
+  
+      }
+  
+    });
+  
+  
+    /* メニューを押したら閉じる */
+  
+    const navLinks =
+      spNav.querySelectorAll("a");
+  
+  
+    navLinks.forEach(link => {
+  
+      link.addEventListener("click", () => {
+  
+        hamburger.classList.remove("active");
+  
+        spNav.classList.remove("active");
+  
+        hamburger.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+  
+        document.body.style.overflow = "";
+  
+      });
+  
+    });
+  
+  });
