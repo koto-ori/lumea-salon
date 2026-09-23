@@ -1,0 +1,2770 @@
+/* =========================
+RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    sans-serif;
+
+  color: #222;
+  background: #fff;
+  line-height: 1.7;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================
+HEADER
+========================= */
+
+.header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-inner {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 22px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  font-size: 11px;
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+}
+
+.nav a {
+  font-size: 11px;
+  letter-spacing: 1px;
+
+  position: relative;
+}
+
+.nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -5px;
+
+  width: 0;
+  height: 1px;
+
+  background: #333;
+
+  transition: 0.3s;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================
+MAIN
+========================= */
+
+main {
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+/* =========================
+HERO
+========================= */
+
+.hero {
+  position: relative;
+}
+
+.hero img {
+  height: 520px;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+
+  top: 50%;
+  left: 12%;
+
+  transform: translateY(-50%);
+}
+
+.hero-text h1 {
+  font-family: serif;
+
+  font-size: 34px;
+  font-weight: normal;
+
+  letter-spacing: 5px;
+}
+
+.hero-text p {
+  margin-top: 14px;
+
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+/* =========================
+スマホ HERO 最終調整
+========================= */
+
+@media (max-width: 768px) {
+
+  .hero-text {
+    top: 35%;
+    left: 4%;
+    width: 45%;
+    transform: translateY(-50%);
+  }
+
+  .hero-text h1 {
+    font-size: 22px;
+    letter-spacing: 3px;
+    line-height: 1.6;
+    white-space: nowrap;
+  }
+
+  .hero-text p {
+    margin-top: 10px;
+    font-size: 8px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+  }
+
+}
+
+
+/* =========================
+NEWS
+========================= */
+
+.news {
+  min-height: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 40px;
+
+  border-bottom: 1px solid #ddd;
+
+  font-size: 12px;
+}
+
+.news span {
+  font-weight: bold;
+}
+
+
+/* =========================
+SECTION
+========================= */
+
+.section {
+  padding: 60px 40px;
+}
+
+.section + .section {
+  border-top: 1px solid #ddd;
+}
+
+.section-title {
+  margin-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.section-title p {
+  font-size: 9px;
+  color: #888;
+}
+
+.section-heading {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* =========================
+MORE
+========================= */
+
+.section-more-wrap {
+    display: flex;
+    justify-content: flex-end;
+  
+    margin-top: 14px;
+  }
+  
+  .section-more-wrap .more {
+    display: inline-block;
+  
+    font-size: 11px;
+    letter-spacing: 1px;
+  
+    transition: opacity 0.3s ease,
+                transform 0.3s ease;
+  }
+  
+  .section-more-wrap .more:hover {
+    opacity: 0.55;
+  
+    transform: translateX(3px);
+  }
+
+/* =========================
+CONCEPT
+========================= */
+
+.concept-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 30px;
+}
+
+.concept-grid img {
+  height: 240px;
+
+  object-fit: cover;
+
+  transition: 0.4s;
+}
+
+.concept-grid a {
+  overflow: hidden;
+}
+
+.concept-grid a:hover img {
+  transform: scale(1.04);
+}
+
+
+/* =========================
+STYLE
+========================= */
+
+.style-grid {
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 15px;
+}
+
+.style-grid img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+
+  transition: 0.4s;
+}
+
+.style-grid article {
+  overflow: hidden;
+}
+
+.style-grid article:hover img {
+  transform: scale(1.05);
+}
+
+
+/* =========================
+STAFF
+========================= */
+
+.staff-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+}
+
+.staff-card {
+  display: grid;
+
+  grid-template-columns: 120px 1fr;
+
+  align-items: center;
+
+  gap: 25px;
+
+  border: 1px solid #ddd;
+
+  padding: 14px;
+}
+
+.staff-card img {
+  height: 150px;
+  object-fit: cover;
+}
+
+.staff-card span {
+  font-size: 9px;
+  color: #888;
+}
+
+.staff-card h3 {
+  margin-top: 10px;
+
+  font-size: 14px;
+  font-weight: normal;
+}
+
+/* =========================
+STYLIST FADE
+========================= */
+
+.staff-fade {
+    opacity: 0;
+  
+    transform:
+      translateY(30px)
+      scale(0.97);
+  
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s ease;
+  }
+  
+  .staff-fade.show {
+    opacity: 1;
+  
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+  /* =========================
+STAFF CARD HOVER
+========================= */
+
+.staff-card {
+    transition:
+      transform 0.35s ease,
+      box-shadow 0.35s ease,
+      background 0.35s ease;
+  }
+  
+  /* カーソルを当てた時 */
+  .staff-card:hover {
+    transform: translateY(-8px);
+  
+    box-shadow:
+      0 12px 30px rgba(0, 0, 0, 0.12);
+  
+    background: #fff;
+  }
+
+  @media (max-width: 768px) {
+
+    .staff-fade {
+      opacity: 0;
+  
+      transform: translateY(25px);
+  
+      transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+    }
+  
+    .staff-fade.show {
+      opacity: 1;
+  
+      transform: translateY(0);
+    }
+  
+  }
+
+  @media (max-width: 768px) {
+
+    .staff-card:active {
+      transform: scale(0.98);
+    }
+  
+  }
+
+/* =========================
+MENU
+========================= */
+
+.menu-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.menu-item {
+  border: 1px solid #ddd;
+
+  padding: 20px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    100px
+    100px;
+
+  gap: 20px;
+
+  align-items: center;
+}
+
+.menu-tags {
+  display: flex;
+  gap: 5px;
+
+  margin-bottom: 8px;
+}
+
+.menu-tags span {
+  border: 1px solid #aaa;
+
+  padding: 1px 5px;
+
+  font-size: 8px;
+}
+
+.menu-content h3 {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.menu-content p {
+  margin-top: 6px;
+
+  font-size: 10px;
+
+  color: #666;
+}
+
+.menu-price {
+  font-size: 13px;
+}
+
+.reserve-btn {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  height: 40px;
+
+  background: #aaa;
+  color: #fff;
+
+  font-size: 11px;
+
+  transition: 0.3s;
+}
+
+.reserve-btn:hover {
+  background: #777;
+}
+
+
+/* =========================
+FOOTER
+========================= */
+
+.footer {
+  background: #999;
+
+  color: #fff;
+
+  text-align: right;
+
+  padding: 8px 40px;
+
+  font-size: 8px;
+}
+
+
+/* =========================
+SP
+========================= */
+
+@media (max-width: 768px) {
+
+  .header-inner {
+    padding: 18px 20px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+
+  main {
+    width: 100%;
+  }
+
+
+  .hero img {
+    height: 450px;
+  }
+
+  .hero-text {
+    left: 8%;
+  }
+
+  .hero-text h1 {
+    font-size: 25px;
+  }
+
+
+  .section {
+    padding: 45px 20px;
+  }
+
+
+  .concept-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .style-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .staff-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .menu-item {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-price {
+    text-align: right;
+  }
+
+}
+
+/* =========================
+RESPONSIVE
+スマホ・タブレット対応
+========================= */
+
+/* タブレット */
+@media (max-width: 1024px) {
+
+    .header-inner,
+    main {
+      width: 100%;
+    }
+  
+    .header-inner {
+      padding: 20px 30px;
+    }
+  
+    .nav {
+      gap: 18px;
+    }
+  
+    .hero img {
+      height: 480px;
+    }
+  
+    .style-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .style-page-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .staff-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .stylist-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  
+  /* =========================
+  スマホ
+  ========================= */
+  
+  @media (max-width: 768px) {
+  
+    body {
+      font-size: 14px;
+    }
+  
+    /* -------------------------
+    HEADER
+    ------------------------- */
+  
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+  
+      background: rgba(255, 255, 255, 0.96);
+    }
+  
+    .header-inner {
+      padding: 16px 20px;
+    }
+  
+    .logo {
+      font-size: 17px;
+    }
+  
+    .logo span {
+      font-size: 9px;
+    }
+  
+    /* PCメニューは非表示 */
+    .nav {
+      display: none;
+    }
+  
+  
+    /* -------------------------
+    MAIN
+    ------------------------- */
+  
+    main {
+      width: 100%;
+    }
+  
+  
+    /* -------------------------
+    HERO
+    ------------------------- */
+  
+    .hero {
+      width: 100%;
+    }
+  
+    .hero img {
+      height: 520px;
+  
+      object-fit: cover;
+  
+      /* 顔の位置に合わせて調整可能 */
+      object-position: 60% center;
+    }
+  
+    .hero-text {
+      top: 50%;
+      left: 8%;
+  
+      width: 80%;
+    }
+  
+    .hero-text h1 {
+      font-size: 25px;
+  
+      letter-spacing: 3px;
+  
+      line-height: 1.7;
+    }
+  
+    .hero-text p {
+      margin-top: 10px;
+  
+      font-size: 8px;
+  
+      letter-spacing: 2px;
+    }
+  
+  
+    /* -------------------------
+    NEWS
+    ------------------------- */
+  
+    .news {
+      min-height: 55px;
+  
+      padding: 12px 20px;
+  
+      gap: 15px;
+  
+      justify-content: flex-start;
+  
+      font-size: 10px;
+    }
+  
+    .news span {
+      flex-shrink: 0;
+    }
+  
+  
+    /* -------------------------
+    SECTION
+    ------------------------- */
+  
+    .section {
+      padding: 45px 20px;
+    }
+  
+    .section-title {
+      margin-bottom: 20px;
+    }
+  
+    .section-title h2 {
+      font-size: 15px;
+    }
+  
+    .section-heading {
+      align-items: center;
+    }
+  
+   
+    /* -------------------------
+    CONCEPT
+    ------------------------- */
+  
+    .concept-grid {
+      grid-template-columns: 1fr;
+  
+      gap: 15px;
+    }
+  
+    .concept-grid img {
+      height: 220px;
+    }
+  
+  
+    /* -------------------------
+    HAIR STYLE
+    ------------------------- */
+  
+    .style-grid {
+      grid-template-columns: repeat(2, 1fr);
+  
+      gap: 12px;
+    }
+  
+    .style-grid img {
+      width: 100%;
+  
+      aspect-ratio: 3 / 4;
+  
+      object-fit: cover;
+    }
+  
+  
+    /* -------------------------
+    STAFF
+    ------------------------- */
+  
+    .staff-grid {
+      grid-template-columns: 1fr;
+  
+      gap: 15px;
+    }
+  
+    .staff-card {
+      grid-template-columns: 110px 1fr;
+  
+      gap: 15px;
+  
+      padding: 12px;
+    }
+  
+    .staff-card img {
+      height: 130px;
+    }
+  
+    .staff-card h3 {
+      font-size: 13px;
+    }
+  
+  
+    /* -------------------------
+    MENU
+    ------------------------- */
+  
+    .menu-item {
+      grid-template-columns: 1fr;
+  
+      gap: 12px;
+  
+      padding: 16px;
+    }
+  
+    .menu-content h3 {
+      font-size: 13px;
+  
+      line-height: 1.7;
+    }
+  
+    .menu-content p {
+      font-size: 9px;
+  
+      line-height: 1.8;
+    }
+  
+    .menu-price {
+      text-align: right;
+  
+      font-size: 14px;
+    }
+  
+    .reserve-btn {
+      width: 100%;
+  
+      height: 44px;
+  
+      font-size: 12px;
+    }
+  
+  
+    /* -------------------------
+    SUB PAGE HEADER
+    ------------------------- */
+  
+    .page-header {
+      padding: 25px 20px;
+    }
+  
+    .page-header h1 {
+      font-size: 16px;
+    }
+  
+  
+    /* -------------------------
+    CONCEPT PAGE
+    ------------------------- */
+  
+    .concept-page {
+      padding: 45px 20px;
+    }
+  
+    .concept-row,
+    .concept-row.reverse {
+      display: flex;
+  
+      flex-direction: column;
+  
+      gap: 25px;
+  
+      margin-bottom: 60px;
+  
+      direction: ltr;
+    }
+  
+    .concept-row img {
+      width: 100%;
+  
+      height: 250px;
+  
+      object-fit: cover;
+    }
+  
+    .concept-text h2 {
+      font-size: 18px;
+  
+      margin-bottom: 18px;
+    }
+  
+    .concept-text p {
+      font-size: 11px;
+  
+      line-height: 2;
+    }
+  
+  
+    /* -------------------------
+    STYLE PAGE
+    ------------------------- */
+  
+    .style-page {
+      padding: 45px 20px;
+    }
+  
+    .style-page-grid {
+      grid-template-columns: repeat(2, 1fr);
+  
+      gap: 25px 12px;
+    }
+  
+    .style-card h2 {
+      font-size: 11px;
+    }
+  
+    .style-card p {
+      font-size: 8px;
+  
+      line-height: 1.7;
+    }
+  
+  
+    /* -------------------------
+    STYLIST PAGE
+    ------------------------- */
+  
+    .stylist-page {
+      padding: 45px 20px;
+    }
+  
+    .stylist-grid {
+      grid-template-columns: 1fr;
+  
+      gap: 18px;
+    }
+  
+    .stylist-box {
+      grid-template-columns: 110px 1fr;
+  
+      gap: 18px;
+  
+      padding: 12px;
+    }
+  
+    .stylist-box img {
+      height: 145px;
+    }
+  
+    .stylist-box h2 {
+      font-size: 14px;
+    }
+  
+  
+    /* -------------------------
+    FOOTER
+    ------------------------- */
+  
+    .footer {
+      padding: 10px 20px;
+  
+      text-align: center;
+  
+      font-size: 7px;
+    }
+  }
+  
+  
+  /* =========================
+  小さいスマホ
+  iPhone SEくらい
+  ========================= */
+  
+  @media (max-width: 480px) {
+  
+    .hero img {
+      height: 470px;
+    }
+  
+    .hero-text h1 {
+      font-size: 22px;
+  
+      letter-spacing: 2px;
+    }
+  
+    .section {
+      padding: 40px 16px;
+    }
+  
+    .style-grid {
+      gap: 8px;
+    }
+  
+    .style-page-grid {
+      gap: 20px 8px;
+    }
+  
+    .staff-card {
+      grid-template-columns: 95px 1fr;
+    }
+  
+    .staff-card img {
+      height: 115px;
+    }
+  
+    .stylist-box {
+      grid-template-columns: 95px 1fr;
+    }
+  
+    .stylist-box img {
+      height: 125px;
+    }
+  }
+/* =========================
+CONCEPT
+========================= */
+
+.concept-feature {
+    padding: 0;
+    background: #e9e9e9;
+  }
+  
+  
+  /* section全体クリック可能 */
+  .concept-feature-link {
+    display: grid;
+  
+    grid-template-columns: 1fr 0.9fr 1fr;
+  
+    align-items: center;
+  
+    gap: 70px;
+  
+    padding: 18px 34px;
+  
+    color: inherit;
+    text-decoration: none;
+  
+    transition: background 0.3s ease;
+  }
+  
+  
+  .concept-feature-link:hover {
+    background: #dfdfdf;
+  }
+  
+  
+  /* =========================
+  画像
+  ========================= */
+  
+  .concept-feature-image {
+    overflow: hidden;
+  }
+  
+  
+  .concept-feature-image img {
+    display: block;
+  
+    width: 100%;
+    height: 310px;
+  
+    object-fit: cover;
+  
+    transition: transform 0.5s ease;
+  }
+  
+  
+  .concept-feature-link:hover
+  .concept-feature-image img {
+    transform: scale(1.03);
+  }
+  
+  
+  /* =========================
+  中央文字
+  ========================= */
+  
+  .concept-feature-center {
+    text-align: center;
+  }
+  
+  
+  .concept-feature-center h2 {
+    margin-bottom: 6px;
+  
+    font-size: 30px;
+    font-weight: 400;
+  
+    letter-spacing: 1px;
+  }
+  
+  
+  .concept-feature-center p {
+    font-size: 13px;
+  
+    letter-spacing: 1px;
+  }
+  
+  
+  
+  /* =========================
+  SMARTPHONE
+  ========================= */
+  
+  @media (max-width: 768px) {
+  
+    .concept-feature {
+      width: 100%;
+    }
+  
+  
+    .concept-feature-link {
+      display: grid;
+  
+      /*
+      左 = 文字
+      右 = 写真
+      */
+      grid-template-columns: 40% 60%;
+  
+      grid-template-areas:
+        "text image";
+  
+      gap: 0;
+  
+      padding: 0;
+  
+      width: 100%;
+  
+      min-height: 200px;
+    }
+  
+  
+    /* =========================
+    concept01を消す
+    ========================= */
+  
+    .concept-image-left {
+      display: none;
+    }
+  
+  
+    /* 念のため1番最初の画像も非表示 */
+    .concept-feature-link
+    .concept-feature-image:first-child {
+      display: none;
+    }
+  
+  
+    /* =========================
+    左：文字
+    ========================= */
+  
+    .concept-feature-center {
+      grid-area: text;
+  
+      display: flex;
+  
+      flex-direction: column;
+  
+      justify-content: center;
+      align-items: center;
+  
+      width: 100%;
+  
+      padding: 20px 10px;
+  
+      text-align: center;
+    }
+  
+  
+    .concept-feature-center h2 {
+      margin: 0 0 5px;
+  
+      font-size: 20px;
+      font-weight: 400;
+  
+      letter-spacing: 1px;
+    }
+  
+  
+    .concept-feature-center p {
+      margin: 0;
+  
+      font-size: 10px;
+  
+      letter-spacing: 1px;
+    }
+  
+  
+    /* =========================
+    右：concept02
+    ========================= */
+  
+    .concept-image-right {
+      grid-area: image;
+  
+      display: block;
+  
+      width: 100%;
+      height: 200px;
+  
+      overflow: hidden;
+    }
+  
+  
+    .concept-image-right img {
+      display: block;
+  
+      width: 100%;
+      height: 100%;
+  
+      object-fit: cover;
+  
+      object-position: center;
+    }
+  
+  }
+
+  /* =========================
+CONCEPT PAGE
+========================= */
+
+.concept-main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  
+  /* =========================
+  PAGE TITLE
+  ========================= */
+  
+  .concept-page-title {
+    text-align: center;
+  
+    padding: 45px 40px 18px;
+  }
+  
+  .concept-page-title h1 {
+    margin: 0;
+  
+    font-size: 30px;
+    font-weight: 400;
+  
+    letter-spacing: 1px;
+  }
+  
+  .concept-page-title p {
+    margin-top: 4px;
+  
+    font-size: 13px;
+  
+    letter-spacing: 1px;
+  }
+  
+  
+  /* タイトル下の横線 */
+  
+  .concept-page-title::after {
+    content: "";
+  
+    display: block;
+  
+    width: 100%;
+    height: 5px;
+  
+    margin-top: 12px;
+  
+    background: #dedede;
+  }
+  
+  
+  /* =========================
+  CONCEPT BLOCK
+  ========================= */
+  
+  .concept-block {
+    display: grid;
+  
+    grid-template-columns: 1fr 1fr;
+  
+    align-items: center;
+  
+    gap: 80px;
+  
+    padding: 70px 65px;
+  }
+  
+  
+  /* =========================
+  TEXT
+  ========================= */
+  
+  .concept-block-text {
+    padding: 20px 10px;
+  }
+  
+  .concept-block-text h2 {
+    margin-bottom: 24px;
+  
+    font-size: 24px;
+    font-weight: 500;
+  
+    letter-spacing: 1px;
+  }
+  
+  .concept-block-text h3 {
+    margin-bottom: 24px;
+  
+    font-size: 20px;
+    font-weight: 400;
+  
+    line-height: 1.8;
+  }
+  
+  .concept-block-text p {
+    margin-bottom: 22px;
+  
+    font-size: 16px;
+  
+    line-height: 1.9;
+  }
+  
+  
+  /* =========================
+  IMAGE
+  ========================= */
+  
+  .concept-block-image {
+    overflow: hidden;
+  }
+  
+  .concept-block-image img {
+    display: block;
+  
+    width: 100%;
+    height: 360px;
+  
+    object-fit: cover;
+  
+    transition: transform 0.5s ease;
+  }
+  
+  
+  /* カーソルを当てると少しズーム */
+  
+  .concept-block-image:hover img {
+    transform: scale(1.03);
+  }
+  
+  /* =========================
+  CONCEPT PAGE SMARTPHONE
+  ========================= */
+  
+  @media (max-width: 768px) {
+  
+    .concept-main {
+      width: 100%;
+    }
+  
+  
+    /* -------------------------
+    TITLE
+    ------------------------- */
+  
+    .concept-page-title {
+      padding: 30px 20px 14px;
+    }
+  
+    .concept-page-title h1 {
+      font-size: 22px;
+    }
+  
+    .concept-page-title p {
+      font-size: 10px;
+    }
+  
+    .concept-page-title::after {
+      height: 3px;
+  
+      margin-top: 10px;
+    }
+  
+  
+    /* -------------------------
+    BLOCK
+    ------------------------- */
+  
+    .concept-block {
+      display: flex;
+  
+      /* 全部画像→文章 */
+      flex-direction: column;
+  
+      gap: 0;
+  
+      padding: 40px 20px;
+    }
+  
+  
+    /*
+    HTML上で
+    文章→画像
+    になっているブロックも
+    スマホでは画像を先にする
+    */
+  
+    .concept-block-text-left
+    .concept-block-image {
+      order: 1;
+    }
+  
+    .concept-block-text-left
+    .concept-block-text {
+      order: 2;
+    }
+  
+  
+    /*
+    SALONはもともと
+    画像→文章なのでそのまま
+    */
+  
+    .concept-block-image-left
+    .concept-block-image {
+      order: 1;
+    }
+  
+    .concept-block-image-left
+    .concept-block-text {
+      order: 2;
+    }
+  
+  
+    /* -------------------------
+    IMAGE
+    ------------------------- */
+  
+    .concept-block-image {
+      width: 100%;
+    }
+  
+    .concept-block-image img {
+      width: 100%;
+  
+      height: auto;
+  
+      aspect-ratio: 4 / 3;
+  
+      object-fit: cover;
+    }
+  
+  
+    /* スマホではhover不要 */
+  
+    .concept-block-image:hover img {
+      transform: none;
+    }
+  
+  
+    /* -------------------------
+    TEXT
+    ------------------------- */
+  
+    .concept-block-text {
+      width: 100%;
+  
+      padding: 25px 4px 0;
+    }
+  
+    .concept-block-text h2 {
+      margin-bottom: 15px;
+  
+      font-size: 20px;
+    }
+  
+    .concept-block-text h3 {
+      margin-bottom: 16px;
+  
+      font-size: 16px;
+  
+      line-height: 1.8;
+    }
+  
+    .concept-block-text p {
+      margin-bottom: 16px;
+  
+      font-size: 13px;
+  
+      line-height: 1.9;
+    }
+  
+  }
+
+  /* =========================
+HAIR STYLE PAGE
+========================= */
+
+.style-main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  
+  /* =========================
+  PAGE TITLE
+  ========================= */
+  
+  .style-page-title {
+    text-align: center;
+    padding: 45px 40px 18px;
+  }
+  
+  .style-page-title h1 {
+    margin: 0;
+  
+    font-size: 30px;
+    font-weight: 400;
+  
+    letter-spacing: 1px;
+  }
+  
+  .style-page-title p {
+    margin-top: 4px;
+  
+    font-size: 13px;
+  
+    letter-spacing: 1px;
+  }
+  
+  .style-page-title::after {
+    content: "";
+  
+    display: block;
+  
+    width: 100%;
+    height: 5px;
+  
+    margin-top: 12px;
+  
+    background: #dedede;
+  }
+  
+  
+  /* =========================
+  STYLE LIST
+  ========================= */
+  
+  .hair-style-list {
+    display: grid;
+  
+    grid-template-columns: repeat(4, 1fr);
+  
+    gap: 55px 18px;
+  
+    padding: 70px 90px 130px;
+  }
+  
+  
+  /* =========================
+  STYLE CARD
+  ========================= */
+  
+  .hair-style-card {
+    min-width: 0;
+  }
+  
+  .hair-style-card img {
+    width: 100%;
+  
+    aspect-ratio: 4 / 5;
+  
+    object-fit: cover;
+  
+    transition:
+      transform 0.4s ease,
+      box-shadow 0.4s ease;
+  }
+  
+  
+  /* カーソルを合わせた時 */
+  .hair-style-card:hover img {
+    transform: translateY(-6px);
+  
+    box-shadow:
+      0 12px 25px rgba(0, 0, 0, 0.12);
+  }
+  
+  
+  .hair-style-card h2 {
+    margin-top: 14px;
+  
+    font-size: 16px;
+    font-weight: 500;
+  
+    line-height: 1.5;
+  }
+  
+  
+  .hair-style-card p {
+    margin-top: 8px;
+  
+    font-size: 11px;
+  
+    line-height: 1.6;
+  }
+
+  /* =========================
+HAIR STYLE PAGE - SMARTPHONE
+========================= */
+
+@media (max-width: 768px) {
+
+    .style-main {
+      width: 100%;
+    }
+  
+  
+    /* -------------------------
+    PAGE TITLE
+    ------------------------- */
+  
+    .style-page-title {
+      padding: 30px 20px 14px;
+    }
+  
+    .style-page-title h1 {
+      font-size: 22px;
+    }
+  
+    .style-page-title p {
+      font-size: 10px;
+    }
+  
+    .style-page-title::after {
+      height: 3px;
+  
+      margin-top: 10px;
+    }
+  
+  
+    /* -------------------------
+    STYLE LIST
+    ------------------------- */
+  
+    .hair-style-list {
+      display: grid;
+  
+      grid-template-columns: repeat(2, 1fr);
+  
+      gap: 32px 12px;
+  
+      padding: 35px 16px 70px;
+    }
+  
+  
+    /* -------------------------
+    STYLE CARD
+    ------------------------- */
+  
+    .hair-style-card img {
+      width: 100%;
+  
+      aspect-ratio: 3 / 4;
+  
+      object-fit: cover;
+    }
+  
+  
+    .hair-style-card h2 {
+      margin-top: 9px;
+  
+      font-size: 12px;
+  
+      line-height: 1.5;
+    }
+  
+  
+    .hair-style-card p {
+      margin-top: 5px;
+  
+      font-size: 9px;
+  
+      line-height: 1.6;
+    }
+  
+  
+    /* スマホではhover動作を解除 */
+    .hair-style-card:hover img {
+      transform: none;
+  
+      box-shadow: none;
+    }
+  
+  }
+
+  /* =========================
+HAIR STYLE PAN ANIMATION
+========================= */
+
+.hair-style-card {
+    opacity: 0;
+  
+    transform: translateX(-40px);
+  
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s ease;
+  }
+  
+  
+  /* 表示された時 */
+  .hair-style-card.show {
+    opacity: 1;
+  
+    transform: translateX(0);
+  }
+  
+  
+  /* 画像のhover */
+  .hair-style-card img {
+    transition:
+      transform 0.4s ease,
+      box-shadow 0.4s ease;
+  }
+  
+  .hair-style-card:hover img {
+    transform: scale(1.03);
+  
+    box-shadow:
+      0 12px 25px rgba(0, 0, 0, 0.12);
+  }
+
+  @media (max-width: 768px) {
+
+    .hair-style-card {
+      opacity: 0;
+  
+      transform: translateX(-25px);
+  
+      transition:
+        opacity 0.55s ease,
+        transform 0.55s ease;
+    }
+  
+    .hair-style-card.show {
+      opacity: 1;
+  
+      transform: translateX(0);
+    }
+  
+    /* スマホはhover解除 */
+    .hair-style-card:hover img {
+      transform: none;
+      box-shadow: none;
+    }
+  
+  }
+
+  /* =========================
+STYLIST PAGE
+========================= */
+
+.stylist-main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  
+  /* =========================
+  PAGE TITLE
+  ========================= */
+  
+  .stylist-page-title {
+    text-align: center;
+  
+    padding: 45px 40px 18px;
+  }
+  
+  .stylist-page-title h1 {
+    margin: 0;
+  
+    font-size: 30px;
+    font-weight: 400;
+  
+    letter-spacing: 1px;
+  }
+  
+  .stylist-page-title p {
+    margin-top: 4px;
+  
+    font-size: 13px;
+  
+    letter-spacing: 1px;
+  }
+  
+  .stylist-page-title::after {
+    content: "";
+  
+    display: block;
+  
+    width: 100%;
+    height: 5px;
+  
+    margin-top: 12px;
+  
+    background: #dedede;
+  }
+  
+  
+  /* =========================
+  STYLIST LIST
+  ========================= */
+  
+  .stylist-list {
+    display: grid;
+  
+    grid-template-columns: repeat(2, 1fr);
+  
+    gap: 55px 45px;
+  
+    padding: 55px 80px 140px;
+  }
+  
+  
+  /* =========================
+  STYLIST CARD
+  ========================= */
+  
+  .stylist-card-rise {
+    display: grid;
+  
+    grid-template-columns: 1fr 1.05fr;
+  
+    align-items: center;
+  
+    min-height: 260px;
+  
+    border: 1px solid #d5d5d5;
+  
+    background: #fff;
+  
+    color: inherit;
+    text-decoration: none;
+  
+    overflow: hidden;
+  
+    opacity: 0;
+  
+    transform: translateY(35px);
+  
+    transition:
+      opacity 0.65s ease,
+      transform 0.65s ease,
+      box-shadow 0.35s ease,
+      border-color 0.35s ease;
+  }
+  
+  
+  /* スクロールで表示 */
+  .stylist-card-rise.show {
+    opacity: 1;
+  
+    transform: translateY(0);
+  }
+  
+  
+  /* カーソルを乗せた時 */
+  .stylist-card-rise:hover {
+    transform: translateY(-7px);
+  
+    box-shadow:
+      0 14px 30px rgba(0, 0, 0, 0.10);
+  
+    border-color: #c8c8c8;
+  }
+  
+  
+  /* =========================
+  PHOTO
+  ========================= */
+  
+  .stylist-photo {
+    height: 100%;
+  
+    overflow: hidden;
+  }
+  
+  .stylist-photo img {
+    width: 100%;
+    height: 100%;
+  
+    min-height: 260px;
+  
+    object-fit: cover;
+  
+    transition: transform 0.45s ease;
+  }
+  
+  
+  .stylist-card-rise:hover
+  .stylist-photo img {
+    transform: scale(1.035);
+  }
+  
+  
+  /* =========================
+  INFO
+  ========================= */
+  
+  .stylist-info {
+    padding: 30px 35px;
+  }
+  
+  .stylist-info span {
+    display: block;
+  
+    margin-bottom: 10px;
+  
+    font-size: 12px;
+  
+    letter-spacing: 1px;
+  }
+  
+  .stylist-info h2 {
+    margin: 0;
+  
+    font-size: 20px;
+    font-weight: 400;
+  
+    letter-spacing: 2px;
+  }
+
+  /* =========================
+STYLIST PAGE - SMARTPHONE
+========================= */
+
+@media (max-width: 768px) {
+
+    .stylist-main {
+      width: 100%;
+    }
+  
+  
+    /* -------------------------
+    TITLE
+    ------------------------- */
+  
+    .stylist-page-title {
+      padding: 30px 20px 14px;
+    }
+  
+    .stylist-page-title h1 {
+      font-size: 22px;
+    }
+  
+    .stylist-page-title p {
+      font-size: 10px;
+    }
+  
+    .stylist-page-title::after {
+      height: 3px;
+  
+      margin-top: 10px;
+    }
+  
+  
+    /* -------------------------
+    LIST
+    ------------------------- */
+  
+    .stylist-list {
+      display: grid;
+  
+      grid-template-columns: 1fr;
+  
+      gap: 22px;
+  
+      padding: 35px 16px 70px;
+    }
+  
+  
+    /* -------------------------
+    CARD
+    ------------------------- */
+  
+    .stylist-card-rise {
+      grid-template-columns: 44% 56%;
+  
+      min-height: 150px;
+  
+      transform: translateY(28px);
+  
+      transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+    }
+  
+  
+    .stylist-card-rise.show {
+      opacity: 1;
+  
+      transform: translateY(0);
+    }
+  
+  
+    /* スマホではhover浮上を解除 */
+    .stylist-card-rise:hover {
+      transform: translateY(0);
+  
+      box-shadow: none;
+    }
+  
+  
+    .stylist-photo img {
+      min-height: 150px;
+  
+      height: 100%;
+    }
+  
+  
+    .stylist-card-rise:hover
+    .stylist-photo img {
+      transform: none;
+    }
+  
+  
+    .stylist-info {
+      padding: 20px;
+    }
+  
+    .stylist-info span {
+      margin-bottom: 7px;
+  
+      font-size: 9px;
+    }
+  
+    .stylist-info h2 {
+      font-size: 16px;
+  
+      letter-spacing: 1px;
+    }
+  
+  }
+
+  /* =========================
+STYLIST DETAIL PAGE
+========================= */
+
+.stylist-detail-main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  
+  /* -------------------------
+  TITLE
+  ------------------------- */
+  
+  .stylist-detail-title {
+    text-align: center;
+    padding: 45px 40px 18px;
+  }
+  
+  .stylist-detail-title h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+  
+  .stylist-detail-title p {
+    margin-top: 6px;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+  
+  .stylist-detail-title::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    margin-top: 12px;
+    background: #dedede;
+  }
+  
+  
+  /* -------------------------
+  PROFILE
+  ------------------------- */
+  
+  .stylist-profile {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 45px;
+    align-items: start;
+    padding: 55px 35px 35px;
+  }
+  
+  
+  /* -------------------------
+  SLIDESHOW
+  ------------------------- */
+  
+  .profile-visual {
+    width: 82%;
+    margin: 0 auto;
+  }
+  
+  .profile-slideshow {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: #f4f4f4;
+  }
+  
+  .profile-slide {
+    position: absolute;
+    inset: 0;
+  
+    width: 100%;
+    height: 100%;
+  
+    object-fit: cover;
+  
+    opacity: 0;
+    transition: opacity 0.8s ease;
+  }
+  
+  .profile-slide.active {
+    opacity: 1;
+  }
+  
+  
+  /* -------------------------
+  TEXT
+  ------------------------- */
+  
+  .profile-text {
+    padding-top: 6px;
+  }
+  
+  .profile-role {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  
+  .profile-text h2 {
+    margin: 0 0 26px;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+  
+  .profile-skill-block {
+    margin-bottom: 26px;
+  }
+  
+  .profile-skill-label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  
+  .profile-skill-main {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+  
+  .profile-text h3 {
+    margin: 0 0 18px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.7;
+  }
+  
+  .profile-text p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  
+  
+  /* -------------------------
+  STYLE SECTION
+  ------------------------- */
+  
+  .stylist-style-section {
+    padding: 10px 0 130px;
+  }
+  
+  .stylist-style-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 18px;
+  
+    margin: 0 0 38px;
+    padding: 0 10px 12px;
+  
+    border-bottom: 5px solid #dedede;
+  }
+  
+  .stylist-style-heading h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+  
+  .stylist-style-heading p {
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  
+  
+  /* -------------------------
+  STYLE GRID
+  ------------------------- */
+  
+  .detail-style-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 0 85px;
+  }
+  
+  .detail-style-card img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease;
+  }
+  
+  .detail-style-card:hover img {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.10);
+  }
+  
+  .detail-style-card h3 {
+    margin-top: 14px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  
+  .detail-style-card p {
+    margin-top: 8px;
+    font-size: 11px;
+    line-height: 1.6;
+  }
+  
+  
+  /* =========================
+  SMARTPHONE
+  ========================= */
+  
+  @media (max-width: 768px) {
+  
+    .stylist-detail-title {
+      padding: 30px 20px 14px;
+    }
+  
+    .stylist-detail-title h1 {
+      font-size: 22px;
+    }
+  
+    .stylist-detail-title p {
+      font-size: 10px;
+    }
+  
+    .stylist-detail-title::after {
+      height: 3px;
+      margin-top: 10px;
+    }
+  
+  
+    /* プロフィール：写真の下に文字 */
+    .stylist-profile {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      padding: 35px 16px 25px;
+    }
+  
+    .profile-slideshow {
+      aspect-ratio: 4 / 5;
+    }
+  
+    .profile-text {
+      padding-top: 0;
+    }
+  
+    .profile-role {
+      margin-bottom: 10px;
+      font-size: 11px;
+    }
+  
+    .profile-text h2 {
+      margin-bottom: 18px;
+      font-size: 22px;
+    }
+  
+    .profile-skill-block {
+      margin-bottom: 18px;
+    }
+  
+    .profile-skill-label {
+      margin-bottom: 6px;
+      font-size: 12px;
+    }
+  
+    .profile-skill-main {
+      font-size: 18px;
+    }
+  
+    .profile-text h3 {
+      margin-bottom: 14px;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+  
+    .profile-text p {
+      font-size: 13px;
+      line-height: 1.8;
+    }
+  
+  
+    /* STYLE見出し */
+    .stylist-style-section {
+      padding: 10px 0 70px;
+    }
+  
+    .stylist-style-heading {
+      gap: 12px;
+      margin-bottom: 24px;
+      padding: 0 0 10px;
+      border-bottom: 3px solid #dedede;
+    }
+  
+    .stylist-style-heading h2 {
+      font-size: 22px;
+    }
+  
+    .stylist-style-heading p {
+      font-size: 10px;
+    }
+  
+  
+    /* スタイル写真は2列 */
+    .detail-style-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 26px 12px;
+      padding: 0 16px;
+    }
+  
+  
+    /* 左横からパンする初期状態 */
+    .detail-style-card {
+      opacity: 0;
+      transform: translateX(-30px);
+      transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+    }
+  
+    .detail-style-card.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  
+    .detail-style-card img {
+      aspect-ratio: 3 / 4;
+    }
+  
+    .detail-style-card h3 {
+      margin-top: 9px;
+      font-size: 12px;
+    }
+  
+    .detail-style-card p {
+      margin-top: 5px;
+      font-size: 9px;
+      line-height: 1.6;
+    }
+  
+    .detail-style-card:hover img {
+      transform: none;
+      box-shadow: none;
+    }
+  
+  }
+
+/* =========================
+MENU PAGE
+========================= */
+
+.menu-page-main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* =========================
+PAGE TITLE
+========================= */
+
+.menu-page-title {
+  padding: 45px 40px 18px;
+
+  text-align: center;
+}
+
+.menu-page-title h1 {
+  margin: 0;
+
+  font-size: 30px;
+  font-weight: 400;
+
+  letter-spacing: 1px;
+}
+
+.menu-page-title p {
+  margin-top: 5px;
+
+  font-size: 13px;
+
+  letter-spacing: 1px;
+}
+
+.menu-page-title::after {
+  content: "";
+
+  display: block;
+
+  width: 100%;
+  height: 5px;
+
+  margin-top: 12px;
+
+  background: #dedede;
+}
+
+
+/* =========================
+MENU LIST
+========================= */
+
+.menu-page-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 30px;
+
+  padding: 55px 95px 130px;
+}
+
+
+/* =========================
+MENU ITEM
+========================= */
+
+.menu-page-item {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    240px;
+
+  min-height: 175px;
+
+  border: 1px solid #d3d3d3;
+
+  background: #fff;
+}
+
+
+/* =========================
+LEFT
+========================= */
+
+.menu-page-body {
+  padding: 22px 28px;
+
+  border-right: 1px solid #dedede;
+}
+
+
+.menu-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-bottom: 15px;
+}
+
+
+.menu-tags span {
+  display: inline-flex;
+
+  justify-content: center;
+  align-items: center;
+
+  min-width: 90px;
+
+  min-height: 28px;
+
+  padding: 3px 14px;
+
+  background: #e1e1e1;
+
+  border: none;
+
+  font-size: 12px;
+}
+
+
+/* タイトルと価格を横並び */
+
+.menu-title-price {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 25px;
+}
+
+
+.menu-title-price h2 {
+  margin: 0;
+
+  font-size: 22px;
+  font-weight: 400;
+
+  line-height: 1.5;
+}
+
+
+.menu-page-price {
+  flex-shrink: 0;
+
+  font-size: 22px;
+
+  white-space: nowrap;
+}
+
+
+.menu-page-body > p {
+  max-width: 720px;
+
+  margin-top: 12px;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+RIGHT RESERVE
+========================= */
+
+.menu-page-reserve {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 25px;
+}
+
+
+.menu-reserve-btn {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 165px;
+  height: 68px;
+
+  background: #aaa;
+
+  color: #fff;
+
+  font-size: 20px;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.menu-reserve-btn:hover {
+  background: #929292;
+
+  transform: translateY(-3px);
+}
+
+/* =========================
+MENU PAGE SMARTPHONE
+========================= */
+
+@media (max-width: 768px) {
+
+  .menu-page-main {
+    width: 100%;
+  }
+
+
+  /* TITLE */
+
+  .menu-page-title {
+    padding: 30px 20px 14px;
+  }
+
+  .menu-page-title h1 {
+    font-size: 22px;
+  }
+
+  .menu-page-title p {
+    font-size: 10px;
+  }
+
+  .menu-page-title::after {
+    height: 3px;
+
+    margin-top: 10px;
+  }
+
+
+  /* LIST */
+
+  .menu-page-list {
+    gap: 20px;
+
+    padding: 35px 15px 70px;
+  }
+
+
+  /* BOX */
+
+  .menu-page-item {
+    display: block;
+
+    min-height: 0;
+  }
+
+
+  .menu-page-body {
+    padding: 20px;
+
+    border-right: none;
+  }
+
+
+  /* TAG */
+
+  .menu-tags {
+    gap: 6px;
+
+    margin-bottom: 14px;
+  }
+
+
+  .menu-tags span {
+    min-width: auto;
+    min-height: 24px;
+
+    padding: 2px 10px;
+
+    font-size: 10px;
+  }
+
+
+  /* PCでは横並びだったタイトル＋価格を解除 */
+
+  .menu-title-price {
+    display: block;
+  }
+
+
+  .menu-title-price h2 {
+    font-size: 16px;
+
+    line-height: 1.6;
+  }
+
+
+  .menu-page-body > p {
+    margin-top: 10px;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+  }
+
+
+  /* 価格を右下 */
+
+  .menu-page-price {
+    margin-top: 20px;
+
+    text-align: right;
+
+    font-size: 19px;
+  }
+
+
+  /* 予約ボタン */
+
+  .menu-page-reserve {
+    padding:
+      0
+      20px
+      20px;
+  }
+
+
+  .menu-reserve-btn {
+    width: 100%;
+    height: 56px;
+
+    font-size: 15px;
+  }
+
+
+  .menu-reserve-btn:hover {
+    transform: none;
+  }
+
+}
