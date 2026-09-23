@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>HAIR STYLE | LUMÉA hair salon</title>
-
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-
 <header class="header">
 
   <div class="header-inner">
@@ -20,6 +9,7 @@
       LUMÉA <span>hair salon</span>
     </a>
 
+    <!-- PC NAV -->
     <nav class="nav">
       <a href="concept.html">CONCEPT</a>
       <a href="style.html">STYLE</a>
@@ -28,7 +18,50 @@
       <a href="#">ACCESS</a>
     </nav>
 
+    <!-- SP HAMBURGER -->
+    <button
+      class="hamburger"
+      id="hamburger"
+      aria-label="メニューを開く"
+      aria-expanded="false"
+      aria-controls="spNav"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
   </div>
+
+  <!-- SP NAV -->
+  <nav class="sp-nav" id="spNav">
+
+    <a href="concept.html">
+      <span>CONCEPT</span>
+      <small>コンセプト</small>
+    </a>
+
+    <a href="style.html">
+      <span>STYLE</span>
+      <small>ヘアスタイル</small>
+    </a>
+
+    <a href="stylist.html">
+      <span>STYLIST</span>
+      <small>スタイリスト</small>
+    </a>
+
+    <a href="menu.html">
+      <span>MENU</span>
+      <small>メニュー</small>
+    </a>
+
+    <a href="#">
+      <span>ACCESS</span>
+      <small>アクセス</small>
+    </a>
+
+  </nav>
 
 </header>
 
